@@ -1,0 +1,39 @@
+#!/bin/sh
+. "$(dirname "$0")/_/husky.sh"
+
+echo 'Styling, testing and building my project before commiting'
+
+
+
+#TODO: check tsconfig standard
+yarn check-format ||
+(
+    echo 'The format is disgusting'
+    false;
+)
+
+
+#TODO: check tsconfig standard
+yarn check-lint ||
+(
+    echo 'Eslint check failed'
+    false;
+)
+
+#TODO: check tsconfig standard
+yarn format ||
+(
+    echo "Can't format code"
+    false;
+)
+
+#If everything passes... try to run build
+echo 'OK shariar! now your code looks good ---> trying to build now'
+
+#TODO: check tsconfig standard
+yarn build ||
+(
+    echo 'Your next build failed'
+    false;
+)
+
