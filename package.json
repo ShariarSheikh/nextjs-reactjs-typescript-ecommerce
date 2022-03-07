@@ -10,7 +10,7 @@
         "check-lint": "eslint . --ext ts --ext tsx --ext js --ext jsx",
         "check-format": "prettier --check .",
         "format": "prettier --write .",
-        "test-all": "yarn check-format && yarn lint & yarn check-types && yarn build"
+        "test-all": "yarn check-format && yarn check-lint && yarn build"
     },
     "dependencies": {
         "next": "12.1.0",
