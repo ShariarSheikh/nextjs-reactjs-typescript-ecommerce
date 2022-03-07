@@ -4,11 +4,10 @@
 echo 'Styling, testing and building my project before commiting'
 
 
-
 #TODO: check tsconfig standard
-yarn check-format ||
+yarn fix-lint ||
 (
-    echo 'The format is disgusting'
+    echo 'Eslint file fixing failed'
     false;
 )
 
@@ -19,6 +18,15 @@ yarn check-lint ||
     echo 'Eslint check failed'
     false;
 )
+
+
+#TODO: check tsconfig standard
+yarn check-format ||
+(
+    echo 'The format is disgusting'
+    false;
+)
+
 
 #TODO: check tsconfig standard
 yarn format ||

@@ -3,7 +3,12 @@
         "browser": true,
         "es2021": true
     },
-    "extends": ["plugin:prettier/recommended", "airbnb", "prettier"],
+    "extends": [
+        "plugin:prettier/recommended",
+        "airbnb",
+        "airbnb/hooks",
+        "prettier"
+    ],
     "parser": "@typescript-eslint/parser",
     "parserOptions": {
         "ecmaFeatures": {
@@ -16,7 +21,6 @@
     "rules": {
         "react/jsx-filename-extension": [1, { "extensions": [".ts", "tsx"] }],
         "react/jsx-props-no-spreading": "off",
-        "react/react-in-jsx-scope": "off",
-        "@next/next/no-img-element": "off"
+        "react/react-in-jsx-scope": "off"
     }
 }

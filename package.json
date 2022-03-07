@@ -7,7 +7,8 @@
         "build": "next build",
         "start": "next start",
         "prepare": "husky install",
-        "check-lint": "eslint . --ext ts --ext tsx --ext js --ext jsx",
+        "check-lint": "eslint . --ext .ts,.tsx . --ext .js,.jsx",
+        "fix-lint": "eslint --fix --ext .ts,.tsx . --ext .js,.jsx",
         "check-format": "prettier --check .",
         "format": "prettier --write .",
         "test-all": "yarn check-format && yarn check-lint && yarn build"
