@@ -21,19 +21,20 @@ yarn check-lint ||
 
 
 #TODO: check tsconfig standard
+yarn format ||
+(
+    echo "Can't format code"
+    false;
+)
+
+
+#TODO: check tsconfig standard
 yarn check-format ||
 (
     echo 'The format is disgusting'
     false;
 )
 
-
-#TODO: check tsconfig standard
-yarn format ||
-(
-    echo "Can't format code"
-    false;
-)
 
 #If everything passes... try to run build
 echo 'OK shariar! now your code looks good ---> trying to build now'
