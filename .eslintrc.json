@@ -1,7 +1,7 @@
 {
     "env": {
         "browser": true,
-        "es2021": true
+        "es2015": true
     },
     "extends": ["plugin:react/recommended", "airbnb", "prettier"],
     "parser": "@typescript-eslint/parser",
@@ -29,7 +29,6 @@
         "react/jsx-props-no-spreading": "off",
         "react/react-in-jsx-scope": "off",
         "linebreak-style": ["error", "unix"],
-        "import/no-unresolved": 0,
         "import/extensions": [
             "error",
             "ignorePackages",
@@ -37,6 +36,18 @@
                 "ts": "never",
                 "tsx": "never"
             }
-        ]
+        ],
+        "import/no-unresolved": 0,
+        "import/prefer-default-export": "off",
+        "no-param-reassign": ["error", { "props": false }],
+        "jsx-a11y/no-noninteractive-element-interactions":"off",
+        "jsx-a11y/click-events-have-key-events":"off",
+        "jsx-a11y/interactive-supports-focus":"off",
+        "jsx-a11y/no-static-element-interactions":"off",
+        "react/no-unescaped-entities":"off",
+        "no-sequences":"off",
+        "jsx-a11y/label-has-associated-control":"off",
+        "no-unsafe-optional-chaining":"off"
+  
     }
 }
