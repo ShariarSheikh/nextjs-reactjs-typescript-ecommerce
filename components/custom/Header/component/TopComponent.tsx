@@ -1,4 +1,5 @@
 import dynamic from 'next/dynamic'
+import Image from 'next/image'
 import Link from 'next/link'
 import React from 'react'
 import { AiOutlineClose, AiOutlineMenu } from 'react-icons/ai'
@@ -6,6 +7,7 @@ import { BsHeart, BsPerson } from 'react-icons/bs'
 import { FiShoppingCart } from 'react-icons/fi'
 import { useDispatch, useSelector } from 'react-redux'
 import useWindowSize from '../../../../hooks/useWindowSize'
+import logo from '../../../../public/pagelogo/fullLogo.png'
 import { getCart, openCart } from '../../../../redux/cartState/cartSlice'
 import {
     isOpenHamburgerMenu,
@@ -18,12 +20,15 @@ const ProductSearchBar = dynamic(() => import('./ProductSearchBar'))
 // ----------------------------------------------------------NOTE:
 function LogoComponent() {
     return (
-        <div className="lg:pr-5 ml-7 lg:ml-0">
-            <p className="cursor-pointer font-bold text-2xl sm:text-[28px] text-blue-400 uppercase ">
-                <Link href="/" passHref>
-                    DeepBazar
-                </Link>
-            </p>
+        <div className="lg:pr-5 ml-4 lg:ml-0">
+            <div className="flex max-w-[150px] h-[48px] relative w-[150px] sm:w-[250px]">
+                <Image
+                    src={logo}
+                    alt="logo"
+                    height={48}
+                    className="object-contain"
+                />
+            </div>
         </div>
     )
 }
